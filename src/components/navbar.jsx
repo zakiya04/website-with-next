@@ -35,6 +35,7 @@ const Navbar = () => {
               className="text-gray-300 h-5 w-8"
             />
           </Link>
+          
         </div>
       </div>
     </div>
