@@ -12,13 +12,7 @@ const Navbar = () => {
           ACME STORE
         </Link>
         <Link className="text-gray-400" href="/all">
-          All
-        </Link>
-        <Link className="text-gray-400" href="/shirts">
-          Shirts
-        </Link>
-        <Link className="text-gray-400" href="/stickers">
-          Stickers
+           View All Products
         </Link>
       </div>
       <div className="flex justify-center items-center w-1/3 p-4">
