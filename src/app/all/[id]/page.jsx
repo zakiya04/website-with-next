@@ -1,10 +1,11 @@
 import React from 'react';
 import ProductInfo from '@/components/showProduct';
-
-function ItemList() {
+export const dynamic = 'force-dynamic'
+async function ItemList({params}) {
+  
   return (
     <div>
-      <ProductInfo/>
+      <ProductInfo params={params}/>
     </div>
   )
 }
