@@ -1,5 +1,5 @@
 import React from "react";
-import GetProducts from "@/components/getProducts";
+import GetProducts from "@/components/product/getProducts";
 
 
 function Products() {

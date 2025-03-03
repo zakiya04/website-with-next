@@ -1,7 +1,7 @@
 import React from "react";
-import API from "@/components/mainapi";
-import Carousal from "@/components/carousal";
-import ThreeGrid from "@/components/ThreeGrid";
+import API from "@/components/product/mainapi";
+import Carousal from "@/components/ui/carousal";
+import ThreeGrid from "@/components/ui/ThreeGrid";
 
 async function Home() {
   const products = await API();
