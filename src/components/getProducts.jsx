@@ -32,6 +32,7 @@ function GetProducts() {
                 alt={item.title}
                 fill
                 className="object-cover"
+                priority
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
               />
             </div>
