@@ -3,13 +3,13 @@ import API from './mainapi';
 import Image from 'next/image';
 
 async function ProductInfo({ params }) {
-
-  if (!params || !params.id) {
+  const {id} = await params
+  if (!{id}) {
     console.error("Missing params or params.id")
   }
 
   const products = await API(); 
-  const product =  products.find(item => item.id == params.id);
+  const product =  products.find(item => item.id =={id});
 
 
   return (
