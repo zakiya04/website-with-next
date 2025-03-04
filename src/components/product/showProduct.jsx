@@ -8,9 +8,9 @@ async function ProductInfo({ params }) {
     console.error("Missing params or params.id")
   }
 
-  const products = await API(); 
-  const product =  products.find(item => item.id =={id});
-
+  const products = await API();
+  const product =  products.find(item => item.id ==Number(id));
+  console.log(product)
 
   return (
     <div className='min-w-full m-4 rounded-lg px-4 text-white flex '>
