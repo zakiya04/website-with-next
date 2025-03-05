@@ -1,13 +1,11 @@
 import React from 'react';
 import API from './mainapi';
 import Image from 'next/image';
+import HandleCart from './CartContext';
 
 async function ProductInfo({ params }) {
-  const {id} = await params
-  if (!{id}) {
-    console.error("Missing params or params.id")
-  }
-
+  const {id} = await params;
+  const {addTocart} = HandleCart()
   const products = await API();
   const product =  products.find(item => item.id ==Number(id));
   console.log(product)
@@ -30,8 +28,11 @@ async function ProductInfo({ params }) {
         <p className='text-gray-300 mt-4'>{product.description}</p>
         <div className='text-2xl font-semibold my-4'>${product.price}</div>
         <hr className='border-gray-700' />
-        <button className='mt-6 bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg transition-colors'>
+        <button className='mt-6 mx-4 bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg transition-colors'>
           Buy Now
+        </button>
+        <button className='mt-6 bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg transition-colors' onClick=''>
+          Add to Cart
         </button>
       </div>
     </div>
