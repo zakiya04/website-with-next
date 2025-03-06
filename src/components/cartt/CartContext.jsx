@@ -1,9 +1,9 @@
 'use client';
 import { useState, useEffect , useContext, createContext} from "react";
 
-const cartContext = createContext();
+const CartContext = createContext();
 
-function HandleCart() {
+ export function HandleCart() {
   const [cart,setCart] = useState([]);
   
   useEffect(()=>{
@@ -12,7 +12,7 @@ function HandleCart() {
   },[])
   
   const addTocart = (product) =>{
-    const updatedCart = [...cart, product];
+    const updatedCart = [...cart,{...product, quantity: 1} ];
     setCart(updatedCart);
     localStorage.setItem('cart',JSON.stringify(updatedCart));
   }
@@ -22,7 +22,20 @@ function HandleCart() {
     localStorage.setItem('cart',JSON.stringify(updatedCart))
   }
 
-  return {cart, addTocart, removeFromcart}
+  return (
+    <CartContext.Provider 
+      value={{ 
+        cart, 
+        addTocart, 
+        removeFromcart, 
+      }}
+    >
+      {children}
+    </CartContext.Provider>
+  )
 }
 
-export default HandleCart
+export function useCart(){
+  const context = useContext(CartContext);
+  return context
+}
