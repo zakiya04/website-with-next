@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductInfo from '@/components/product/showProduct';
+import ProductInfo from '@/components/cartt/showProduct';
 
 function ItemList({params}) {
   

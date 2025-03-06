@@ -1,10 +1,10 @@
 import React from 'react';
-import CartUi from '@/components/ui/cart';
+import CartUi from '@/components/cartt/cart';
 
 function Cart() {
   return (
     <div>
-      <CartUi/>
+      <CartUi />
     </div>
   )
 }
