@@ -1,9 +1,10 @@
-import React from "react";
+'use client'
 import Image from "next/image";
 import { useCart } from "@/components/cartt/CartContext";
 
-function ProductInfo({ product }) {
-  const addTocart = useCart();
+function ProductInfo({product}) {
+ console.log(product)
+  const {addTocart} = useCart();
 
   return (
     <div className="min-w-full m-4 rounded-lg px-4 text-white flex ">
