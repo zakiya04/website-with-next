@@ -1,9 +1,9 @@
 'use client'
-import HandleCart from "./CartContext";
+import { useCart } from "@/components/cartt/CartContext";
 import Link from "next/link";
 
 function CartUi() {
-  const {cart} = HandleCart();
+  const {cart} = useCart();
   console.log(cart)
   return (
     <div className="text-white">
