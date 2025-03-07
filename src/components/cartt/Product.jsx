@@ -1,8 +1,8 @@
 import API from "../product/mainapi";
 import ProductInfo from "./showProduct";
 
-async function ProductUi() {
-    const { id } = await params;
+async function ProductUi({params}) {
+    const { id } = params;
     const products = await API();
     const product = products.find((item) => item.id == Number(id));
   return (
