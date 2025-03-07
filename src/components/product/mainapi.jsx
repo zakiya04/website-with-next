@@ -1,4 +1,3 @@
-import React from "react";
 
 async function API() {
   const res = await fetch("https://fakestoreapi.com/products");
